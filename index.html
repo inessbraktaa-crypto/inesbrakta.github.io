@@ -2,45 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon Portfolio</title>
+  <title>Portfolio – Inès Brakta</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Inès Brakta</h1>
-  <p>BTS Cybersecurity Student</p>
-  <a href="#projects" class="btn">my projects</a>
+<header class="hero">
+  <div class="hero-content">
+    <h1>Inès Brakta</h1>
+    <span class="tag">Étudiante en BTS Cybersécurité</span>
+    <p class="subtitle">
+      Passionnée par la sécurité informatique, la programmation et la protection des données.
+    </p>
+    <a href="#projects" class="btn">Découvrir mes projets</a>
+  </div>
 </header>
 
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I'm a Student
-  </p>
+<section id="about" class="about">
+  <h2>À propos de moi</h2>
+  <div class="about-container">
+    <p>
+      Actuellement en BTS Cybersécurité, je m’intéresse aux réseaux, à la sécurité des systèmes 
+      et au développement web. J’aime apprendre, expérimenter et créer des projets qui ont du sens.
+    </p>
+  </div>
 </section>
 
-<section id="projects">
-  <h2>My projects</h2>
+<section id="projects" class="projects">
+  <h2>Mes projets</h2>
 
   <div class="projects-grid">
     <div class="card">
-      <h3>Project 1</h3>
-      <p>Test</p>
-      <a href="https://github.com/toncompte/projet1" target="_blank">See</a>
+      <h3>🔐 Projet Cybersécurité</h3>
+      <p>Analyse et sécurisation d’un réseau local.</p>
+      <a href="https://github.com/toncompte/projet1" target="_blank" class="link">Voir le projet</a>
     </div>
 
     <div class="card">
-      <h3>Project 2</h3>
-      <p>App Test</p>
-      <a href="https://github.com/toncompte/projet2" target="_blank">See</a>
+      <h3>💻 Application Web</h3>
+      <p>Création d’une application interactive en HTML/CSS/JS.</p>
+      <a href="https://github.com/toncompte/projet2" target="_blank" class="link">Voir le projet</a>
     </div>
   </div>
 </section>
 
+<section id="contact" class="contact">
+  <h2>Me contacter</h2>
+  <p>Tu peux me retrouver sur GitHub ou m’écrire si tu veux échanger !</p>
+  <a href="https://github.com/toncompte" class="btn">Voir mon GitHub</a>
+</section>
+
 <footer>
-  <p>© 2026 - Inès Brakta</p>
-  <a href="https://github.com/toncompte">GitHub</a>
+  <p>© 2026 – Inès Brakta</p>
 </footer>
 
 <script src="script.js"></script>

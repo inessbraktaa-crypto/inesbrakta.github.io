@@ -1,72 +1,67 @@
-/* ======= STYLE GLOBAL ======= */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  font-family: 'Poppins', sans-serif;
+  background: #0b1220;
   color: white;
 }
 
-/* ======= HEADER (HERO) ======= */
+/* HERO */
 .hero {
   height: 100vh;
+  background: linear-gradient(135deg, #0b1220, #112240);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at top, #1e293b, #020617);
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
 }
 
 .tag {
-  display: inline-block;
-  background: #22c55e;
-  color: black;
-  padding: 5px 10px;
+  background: #6c63ff;
+  padding: 5px 12px;
   border-radius: 20px;
-  font-weight: bold;
 }
 
-.subtitle {
-  margin: 15px 0;
-  opacity: 0.8;
-}
-
+/* BOUTONS */
 .btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background: #22c55e;
-  color: black;
+  background: #6c63ff;
+  color: white;
   text-decoration: none;
   border-radius: 25px;
-  font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #16a34a;
+  background: #574bff;
 }
 
-/* ======= SECTIONS ======= */
+/* SECTIONS */
 section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
-/* ABOUT */
-.about {
-  background: #020617;
+/* SKILLS */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills-grid span {
+  background: #112240;
+  padding: 10px 15px;
+  border-radius: 15px;
 }
 
 /* PROJECTS */
-.projects {
-  background: #0f172a;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -75,33 +70,39 @@ section {
   margin: auto;
 }
 
-/* CARTES DE PROJETS */
 .card {
-  background: #111827;
+  background: #112240;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
-  transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: scale(1.05);
+/* CERTIFICATIONS */
+.certif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.link {
-  color: #22c55e;
-  text-decoration: none;
-  font-weight: bold;
+.certif-card {
+  background: #112240;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.certif-card img {
+  width: 80px;
 }
 
 /* CONTACT */
 .contact {
-  background: #020617;
+  background: #0b1220;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: black;
+  background: #050b15;
 }

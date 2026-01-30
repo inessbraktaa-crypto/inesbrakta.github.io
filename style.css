@@ -221,3 +221,22 @@ footer {
   }
 }
 
+/* ================================
+   HERO – CLEAN VERSION
+================================ */
+
+.role {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.hero-line {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  opacity: 0.85;
+}

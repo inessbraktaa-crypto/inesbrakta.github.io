@@ -169,6 +169,12 @@ body {
 /* ================================
    SECTIONS
 ================================ */
+/* Pour toutes les sections scroll-to */
+section {
+  padding-top: 80px; /* espace pour que le haut ne soit pas caché */
+  margin-top: -80px; /* décale le scroll */
+}
+
 section {
   padding: 100px 20px;
   text-align: center;

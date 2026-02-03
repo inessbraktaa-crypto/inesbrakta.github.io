@@ -27,6 +27,65 @@ body {
   line-height: 1.7;
 }
 
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(219,182,201,0.95); /* léger rose transparent */
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: var(--accent);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.experiences .exp-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.exp-card {
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.exp-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.exp-card p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+
 /* ================================
    HERO
 ================================ */

@@ -27,7 +27,9 @@ body {
   line-height: 1.7;
 }
 
-
+/* ================================
+   TOP NAV
+================================ */
 .top-nav {
   position: fixed;       /* reste en haut */
   top: 0;
@@ -35,9 +37,9 @@ body {
   width: 100%;
   background: rgba(219,182,201,0.95); /* fond rose clair transparent */
   display: flex;
-  justify-content: space-between;     /* left / right */
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;    /* espace interne */
+  padding: 10px 40px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   z-index: 1000;
 }
@@ -71,35 +73,6 @@ body {
   margin-left: 15px;
 }
 
-
-.experiences .exp-grid {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-.exp-card {
-  background: var(--bg-card);
-  padding: 25px;
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  text-align: left;
-}
-
-.exp-card h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.exp-card p {
-  color: var(--text-muted);
-  margin-bottom: 8px;
-}
-
-
 /* ================================
    HERO
 ================================ */
@@ -118,75 +91,24 @@ body {
   margin-bottom: 10px;
 }
 
-.tag {
-  display: inline-block;
+.role {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
   margin-bottom: 20px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  background: var(--accent);
-  color: white;
-  font-size: 0.9rem;
 }
 
-.subtitle {
-  color: var(--text-muted);
+.hero-line {
   max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 1.05rem;
-}
-
-
-
-/* Timeline vertical à gauche */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  padding-left: 30px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;       /* position du trait vertical */
-  top: 0;
-  width: 3px;       /* épaisseur du trait */
-  height: 100%;
-  background: var(--accent); /* couleur rose */
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: 7px;        /* centre du dot sur le trait */
-  top: 5px;
-  width: 15px;
-  height: 15px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
-.timeline-content {
-  margin-left: 40px;
-}
-
-.timeline-content h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--accent);
-  margin-bottom: 5px;
-}
-
-.timeline-content p {
-  color: var(--text-muted);
-  margin-bottom: 5px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  opacity: 0.85;
 }
 
 /* ================================
-   BUTTON
+   BUTTONS
 ================================ */
 .btn {
   display: inline-block;
@@ -204,9 +126,9 @@ body {
   transform: translateY(-2px);
 }
 
-  .btn.linkedin {
-  background: white;      /* fond clair */
-  color: var(--accent);   /* texte rose */
+.btn.linkedin {
+  background: white;
+  color: var(--accent);
   border: 1px solid var(--accent);
 }
 
@@ -215,17 +137,12 @@ body {
   color: white;
 }
 
-
 /* ================================
-   SECTIONS
+   SECTIONS SCROLL TO
 ================================ */
-/* Pour toutes les sections scroll-to */
 section {
-  padding-top: 80px; /* espace pour que le haut ne soit pas caché */
-  margin-top: -80px; /* décale le scroll */
-}
-
-section {
+  padding-top: 80px; /* pour scroll-to */
+  margin-top: -80px;
   padding: 100px 20px;
   text-align: center;
 }
@@ -245,19 +162,22 @@ h2 {
   color: var(--text-muted);
 }
 
+/* ================================
+   EDUCATION / TIMELINE
+================================ */
 .education .timeline {
   position: relative;
-  max-width: 600px;       /* largeur fixe pour rester à gauche */
-  margin: 0;              /* pas centré */
-  padding-left: 30px;     /* espace pour le trait */
+  max-width: 600px;
+  margin: 0;
+  padding-left: 30px;
 }
 
 .education .timeline::before {
   content: '';
   position: absolute;
-  left: 0;                /* trait collé à gauche */
+  left: 0;
   top: 0;
-  width: 3px;             /* épaisseur du trait */
+  width: 3px;
   height: 100%;
   background: var(--accent);
 }
@@ -269,7 +189,7 @@ h2 {
 
 .education .timeline-dot {
   position: absolute;
-  left: -6px;             /* centre le dot sur le trait */
+  left: -6px;
   top: 5px;
   width: 15px;
   height: 15px;
@@ -278,8 +198,8 @@ h2 {
 }
 
 .education .timeline-content {
-  margin-left: 30px;      /* espace entre le trait et le texte */
-  text-align: left;       /* texte aligné à gauche */
+  margin-left: 30px;
+  text-align: left;
 }
 
 .education .timeline-content h3 {
@@ -293,22 +213,18 @@ h2 {
   margin-bottom: 5px;
 }
 
-
 /* ================================
    SKILLS + ENVIRONMENTS
 ================================ */
-
-/* Grids pour skills et environnements */
 .skills-grid,
 .environments-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 15px; /* espace entre les lignes */
+  margin-bottom: 15px;
 }
 
-/* Base skill */
 .skill {
   padding: 12px 22px;
   border-radius: 25px;
@@ -326,11 +242,10 @@ h2 {
 
 /* Environments */
 .skill.env {
-  background: #f7eef3; /* teinte douce */
+  background: #f7eef3;
   color: var(--text-main);
-  border: 1px solid #e0d5dc; /* léger contour pour que ça ressorte */
+  border: 1px solid #e0d5dc;
 }
-
 
 /* ================================
    LANGUAGES – DOT LEVELS
@@ -364,7 +279,7 @@ h2 {
 }
 
 .dot {
-  display: inline-block; /* ← OBLIGATOIRE */
+  display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -374,8 +289,6 @@ h2 {
 .dot.full {
   background: var(--accent);
 }
-
-
 
 /* ================================
    PROJECTS
@@ -484,24 +397,4 @@ footer {
   h2 {
     font-size: 2.1rem;
   }
-}
-
-/* ================================
-   HERO – CLEAN VERSION
-================================ */
-
-.role {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-.hero-line {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  font-size: 1.1rem;
-  color: var(--text-main);
-  opacity: 0.85;
 }

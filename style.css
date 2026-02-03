@@ -166,55 +166,73 @@ h2 {
    EDUCATION / TIMELINE
 ================================ */
 .education {
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
   padding: 50px 20px;
-  text-align: left;
 }
 
-.edu-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 30px;
 }
 
-.edu-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;       /* ligne verticale */
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 3px solid white; /* cercle blanc à l'intérieur pour effet */
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.timeline-content {
+  margin-left: 40px;
   background: var(--bg-card);
-  padding: 20px 25px;
-  border-radius: 20px;
+  padding: 15px 20px;
+  border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+.timeline-content:hover {
+  transform: translateY(-4px);
 }
 
-.edu-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.edu-info h3 {
+.timeline-content h3 {
   font-family: 'Playfair Display', serif;
   color: var(--accent);
-  margin: 0 0 5px 0;
+  margin-bottom: 5px;
 }
 
-.edu-date {
-  display: block;
+.timeline-content .edu-date {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 8px;
+  display: block;
 }
 
-.edu-info p {
-  margin: 0;
+.timeline-content p {
   color: var(--text-main);
+  margin: 0;
 }
 
 

@@ -153,6 +153,7 @@ h2 {
 }
 
 .dot {
+  display: inline-block; /* ← OBLIGATOIRE */
   width: 10px;
   height: 10px;
   border-radius: 50%;

@@ -195,6 +195,33 @@ h2 {
   color: var(--text-muted);
 }
 
+.education .edu-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.edu-card {
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.edu-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.edu-card p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
 /* ================================
    SKILLS + ENVIRONMENTS
 ================================ */

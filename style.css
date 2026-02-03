@@ -107,6 +107,7 @@ h2 {
 /* ================================
    SKILLS
 ================================ */
+
 .skills-grid {
   display: flex;
   justify-content: center;
@@ -114,12 +115,27 @@ h2 {
   gap: 15px;
 }
 
-.skills-grid span {
-  background: var(--bg-card);
+/* Base skill */
+.skill {
   padding: 12px 22px;
   border-radius: 25px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  background: var(--bg-card);
 }
+
+/* Core / technical */
+.skill.tech {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Operating systems */
+.skill.os {
+  background: #f7eef3;
+  color: var(--text-main);
+}
+
 
 /* ================================
    LANGUAGES – DOT LEVELS

@@ -122,6 +122,34 @@ h2 {
 }
 
 /* ================================
+   LANGUAGES
+================================ */
+.languages-grid {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.language-card {
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.language-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 8px;
+}
+
+.language-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ================================
    PROJECTS
 ================================ */
 .projects-grid {

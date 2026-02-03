@@ -337,6 +337,15 @@ h2 {
   margin-bottom: 10px;
 }
 
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--accent-soft);
+}
+
 /* ================================
    FOOTER
 ================================ */

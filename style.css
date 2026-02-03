@@ -135,6 +135,56 @@ body {
   font-size: 1.05rem;
 }
 
+
+
+/* Timeline vertical à gauche */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;       /* position du trait vertical */
+  top: 0;
+  width: 3px;       /* épaisseur du trait */
+  height: 100%;
+  background: var(--accent); /* couleur rose */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 7px;        /* centre du dot sur le trait */
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  margin-left: 40px;
+}
+
+.timeline-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
 /* ================================
    BUTTON
 ================================ */

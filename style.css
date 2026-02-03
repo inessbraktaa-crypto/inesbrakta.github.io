@@ -154,6 +154,18 @@ body {
   transform: translateY(-2px);
 }
 
+  .btn.linkedin {
+  background: white;      /* fond clair */
+  color: var(--accent);   /* texte rose */
+  border: 1px solid var(--accent);
+}
+
+.btn.linkedin:hover {
+  background: var(--accent);
+  color: white;
+}
+
+
 /* ================================
    SECTIONS
 ================================ */

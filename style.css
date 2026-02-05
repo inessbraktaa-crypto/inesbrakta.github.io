@@ -31,11 +31,11 @@ body {
    TOP NAV
 ================================ */
 .top-nav {
-  position: fixed;       /* reste en haut */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(219,182,201,0.95); /* fond rose clair transparent */
+  background: rgba(219,182,201,0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +141,7 @@ body {
    SECTIONS SCROLL TO
 ================================ */
 section {
-  padding-top: 80px; /* pour scroll-to */
+  padding-top: 80px;
   margin-top: -80px;
   padding: 100px 20px;
   text-align: center;
@@ -253,14 +253,12 @@ h2 {
   text-align: center;
 }
 
-/* Main skills */
 .skill.tech {
   background: var(--bg-card);
   border: 1px solid var(--accent);
   color: var(--accent);
 }
 
-/* Environments */
 .skill.env {
   background: #f7eef3;
   color: var(--text-main);
@@ -268,7 +266,7 @@ h2 {
 }
 
 /* ================================
-   LANGUAGES – DOT LEVELS
+   LANGUAGES
 ================================ */
 .languages-list {
   max-width: 600px;
@@ -299,7 +297,6 @@ h2 {
 }
 
 .dot {
-  display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -350,7 +347,9 @@ h2 {
   font-weight: 600;
 }
 
-
+/* ================================
+   EXPERIENCES
+================================ */
 .experiences .exp-grid {
   max-width: 1000px;
   margin: auto;

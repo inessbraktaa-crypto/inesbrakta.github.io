@@ -1,5 +1,5 @@
 // ============================================
-// 1. PARTICLE BACKGROUND (Canvas)
+// 1. PARTICULES (Canvas)
 // ============================================
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
@@ -29,7 +29,6 @@ class Particle {
     update() {
         this.x += this.vx;
         this.y += this.vy;
-
         if (this.x < 0 || this.x > width) this.vx *= -1;
         if (this.y < 0 || this.y > height) this.vy *= -1;
     }
@@ -37,7 +36,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(201, 24, 74, 0.5)';
+        ctx.fillStyle = 'rgba(201, 24, 74, 0.6)';
         ctx.fill();
     }
 }
@@ -55,7 +54,6 @@ function drawConnections() {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-
             if (dist < CONNECTION_DISTANCE) {
                 const opacity = 1 - dist / CONNECTION_DISTANCE;
                 ctx.beginPath();
@@ -71,12 +69,10 @@ function drawConnections() {
 
 function animateParticles() {
     ctx.clearRect(0, 0, width, height);
-
     for (const p of particles) {
         p.update();
         p.draw();
     }
-
     drawConnections();
     requestAnimationFrame(animateParticles);
 }
@@ -85,7 +81,7 @@ initParticles();
 animateParticles();
 
 // ============================================
-// 2. TYPEWRITER EFFECT
+// 2. MACHINE À ÉCRIRE
 // ============================================
 const typewriterElement = document.getElementById('typewriter');
 const phrases = [
@@ -115,7 +111,7 @@ function typeEffect() {
 
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        typeSpeed = 2000; // pause before deleting
+        typeSpeed = 2000;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -128,21 +124,19 @@ function typeEffect() {
 typeEffect();
 
 // ============================================
-// 3. NAVIGATION — SCROLL & ACTIVE LINK
+// 3. NAVIGATION & SCROLL SPY
 // ============================================
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section[id]');
 
-// Nav background on scroll
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Active link highlight (scroll spy)
 function updateActiveLink() {
     let current = '';
-    const scrollPos = window.scrollY + 120;
+    const scrollPos = window.scrollY + 100; // décalage pour la navbar
 
     sections.forEach(section => {
         const top = section.offsetTop;
@@ -164,7 +158,7 @@ window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
 
 // ============================================
-// 4. HAMBURGER MENU
+// 4. HAMBURGER
 // ============================================
 const hamburger = document.getElementById('hamburger');
 const navLinksContainer = document.getElementById('navLinks');
@@ -174,7 +168,6 @@ hamburger.addEventListener('click', () => {
     navLinksContainer.classList.toggle('open');
 });
 
-// Close menu on link click (mobile)
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -183,7 +176,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // ============================================
-// 5. COUNTER ANIMATION (About stats)
+// 5. COMPTEURS ANIMÉS
 // ============================================
 const statNumbers = document.querySelectorAll('.stat-number');
 
@@ -191,8 +184,7 @@ function animateCounter(el) {
     const target = parseInt(el.getAttribute('data-count'), 10);
     let current = 0;
     const increment = target / 40;
-    const duration = 1200;
-    const stepTime = duration / 40;
+    const stepTime = 1200 / 40;
 
     const timer = setInterval(() => {
         current += increment;
@@ -205,17 +197,15 @@ function animateCounter(el) {
     }, stepTime);
 }
 
-// Use Intersection Observer to trigger counters
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const el = entry.target;
-            animateCounter(el);
-            observer.unobserve(el);
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
 statNumbers.forEach(el => observer.observe(el));
 
-console.log('🚀 Portfolio Inès Brakta — loaded with style!');
+console.log('🚀 Portfolio Inès Brakta – version sombre & complète !');

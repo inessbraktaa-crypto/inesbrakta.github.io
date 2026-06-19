@@ -1,70 +1,221 @@
-// ============================================================
-// 1. HAMBURGER MENU (mobile)
-// ============================================================
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+// ============================================
+// 1. PARTICLE BACKGROUND (Canvas)
+// ============================================
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('open');
-});
+let width, height;
+let particles = [];
+const PARTICLE_COUNT = 80;
+const CONNECTION_DISTANCE = 120;
 
-// Fermer le menu quand on clique sur un lien (mobile)
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('open');
-  });
-});
-
-// ============================================================
-// 2. NAV BACKGROUND CHANGE ON SCROLL
-// ============================================================
-const topNav = document.getElementById('topNav');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    topNav.classList.add('scrolled');
-  } else {
-    topNav.classList.remove('scrolled');
-  }
-});
-
-// ============================================================
-// 3. ACTIVE LINK HIGHLIGHT (Scroll Spy)
-// ============================================================
-const sections = document.querySelectorAll('section[id]');
-const navLinkItems = document.querySelectorAll('.nav-link');
-
-function updateActiveLink() {
-  let currentSectionId = '';
-  const scrollPos = window.scrollY + 120; // décalage pour la nav fixe
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-      currentSectionId = section.getAttribute('id');
-    }
-  });
-
-  navLinkItems.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentSectionId}`) {
-      link.classList.add('active');
-    }
-  });
+function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
 }
 
-// Détecter le scroll pour mettre à jour le lien actif
-window.addEventListener('scroll', updateActiveLink);
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
-// Appel initial pour définir le bon lien au chargement
+class Particle {
+    constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = Math.random() * 2 + 1;
+    }
+
+    update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(201, 24, 74, 0.5)';
+        ctx.fill();
+    }
+}
+
+function initParticles() {
+    particles = [];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+    }
+}
+
+function drawConnections() {
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < CONNECTION_DISTANCE) {
+                const opacity = 1 - dist / CONNECTION_DISTANCE;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(201, 24, 74, ${opacity * 0.25})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (const p of particles) {
+        p.update();
+        p.draw();
+    }
+
+    drawConnections();
+    requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+
+// ============================================
+// 2. TYPEWRITER EFFECT
+// ============================================
+const typewriterElement = document.getElementById('typewriter');
+const phrases = [
+    'BTS Cybersecurity Student',
+    'Network & System Security Enthusiast',
+    'Python & PowerShell Developer',
+    'Ethical Hacker in Training'
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 80;
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 40;
+    } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 80;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 400;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+}
+
+typeEffect();
+
+// ============================================
+// 3. NAVIGATION — SCROLL & ACTIVE LINK
+// ============================================
+const navbar = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+
+// Nav background on scroll
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Active link highlight (scroll spy)
+function updateActiveLink() {
+    let current = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.clientHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
 
-// ============================================================
-// 4. PETIT PLUS : effet de survol subtil sur les cartes (déjà en CSS)
-//    Rien à ajouter, tout est géré en CSS.
-// ============================================================
+// ============================================
+// 4. HAMBURGER MENU
+// ============================================
+const hamburger = document.getElementById('hamburger');
+const navLinksContainer = document.getElementById('navLinks');
 
-console.log('🚀 Portfolio Inès Brakta – Navigation dynamique chargée !');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinksContainer.classList.toggle('open');
+});
+
+// Close menu on link click (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinksContainer.classList.remove('open');
+    });
+});
+
+// ============================================
+// 5. COUNTER ANIMATION (About stats)
+// ============================================
+const statNumbers = document.querySelectorAll('.stat-number');
+
+function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    let current = 0;
+    const increment = target / 40;
+    const duration = 1200;
+    const stepTime = duration / 40;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            el.textContent = target;
+            clearInterval(timer);
+        } else {
+            el.textContent = Math.floor(current);
+        }
+    }, stepTime);
+}
+
+// Use Intersection Observer to trigger counters
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            animateCounter(el);
+            observer.unobserve(el);
+        }
+    });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(el => observer.observe(el));
+
+console.log('🚀 Portfolio Inès Brakta — loaded with style!');

@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inès Brakta – Cybersecurity</title>
+    <title>Inès Brakta – Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- ===== CANVAS BACKGROUND ===== -->
+    <!-- ===== CANVAS (particules) ===== -->
     <canvas id="bgCanvas"></canvas>
 
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">IB</a>
+            <a href="#hero" class="logo">IB</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experiences" class="nav-link">Experiences</a></li>
+                <li><a href="#languages" class="nav-link">Languages</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-right">
+                <a href="https://github.com/inessbraktaa-crypto" target="_blank" class="social-icon">
+                    <img src="githubicon.png" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/in%C3%A8s-brakta" target="_blank" class="social-icon">
+                    <img src="linkedinicon.png" alt="LinkedIn" />
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -35,16 +46,11 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <p class="hero-greeting">Hey, I'm</p>
-            <h1 class="hero-title">Inès Brakta</h1>
-            <p class="hero-role">
-                <span class="typewriter" id="typewriter"></span>
-            </p>
-            <p class="hero-description">
-                Learning how systems break and how to secure them.
-            </p>
+            <h1 class="glitch">Inès Brakta</h1>
+            <p class="role"><span class="typewriter" id="typewriter"></span></p>
+            <p class="hero-line">Learning how systems break and how to secure them.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="cv-ines-brakta.pdf" target="_blank" class="btn btn-outline">Download CV</a>
+                <a href="cv-ines-brakta.pdf" target="_blank" class="btn btn-primary">Download CV</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -56,16 +62,17 @@
     <!-- ===== ABOUT ===== -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About me</h2>
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I'm a <strong>BTS Cybersecurity</strong> student passionate about networks and system security.
-                        I love learning, gaining hands-on experience, and building projects that make a difference.
+                        Currently in my first year of <strong>BTS Cybersecurity</strong>,
+                        I am interested in networks and system security.
+                        I enjoy learning, gaining experience and developing new projects.
                     </p>
                     <p>
-                        Currently exploring the depths of <strong>Python</strong>, <strong>PowerShell</strong>, and
-                        <strong>ethical hacking</strong> — always with a curious mind and a drive to secure the digital world.
+                        Passionate about Python, PowerShell and ethical hacking,
+                        I am always looking for new challenges.
                     </p>
                     <div class="about-social">
                         <a href="https://github.com/inessbraktaa-crypto" target="_blank" class="social-link">GitHub</a>
@@ -82,8 +89,33 @@
                         <span class="stat-label">Projects</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-number" data-count="3">0</span>
                         <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>BTS Cybersecurity – Lycée Guillaume Kroll</h3>
+                        <span class="timeline-date">2024 – </span>
+                        <p>Focused on network &amp; system security, Python &amp; PowerShell basics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>High School Diploma – Lycée Frédéric Chopin</h3>
+                        <span class="timeline-date">2022 – 2024</span>
+                        <p>Mathematics and English literature focus.</p>
                     </div>
                 </div>
             </div>
@@ -93,34 +125,86 @@
     <!-- ===== SKILLS ===== -->
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">Skills &amp; Tools</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Cybersecurity</h3>
+                <span class="skill tech">Cybersecurity</span>
+                <span class="skill tech">Networking</span>
+                <span class="skill tech">Python</span>
+                <span class="skill tech">HTML / CSS</span>
+                <span class="skill tech">PowerShell</span>
+                <span class="skill tech">Project Management</span>
+            </div>
+            <div class="environments-grid">
+                <span class="skill env">Linux</span>
+                <span class="skill env">Windows</span>
+                <span class="skill env">Kali Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCES ===== -->
+    <section id="experiences" class="section experiences">
+        <div class="container">
+            <h2 class="section-title">Experiences &amp; Events</h2>
+            <div class="exp-grid">
+                <div class="exp-card">
+                    <h3>CyberDay Luxembourg</h3>
+                    <p><strong>Date:</strong> October 2025</p>
+                    <p>Participation à des ateliers, conférences, networking dans le domaine de la cybersécurité.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>Networking</h3>
+                <div class="exp-card">
+                    <h3>Internet Days Luxembourg</h3>
+                    <p><strong>Date:</strong> November 2025</p>
+                    <p>Participation à des conférences sur la sécurité et l'innovation numérique.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>Python</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LANGUAGES ===== -->
+    <section id="languages" class="section languages">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages-list">
+                <div class="language-row">
+                    <span class="lang-name">French</span>
+                    <span class="lang-dots">
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot full"></span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <h3>HTML / CSS</h3>
+                <div class="language-row">
+                    <span class="lang-name">English</span>
+                    <span class="lang-dots">
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot"></span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <h3>PowerShell</h3>
+                <div class="language-row">
+                    <span class="lang-name">Italian</span>
+                    <span class="lang-dots">
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot full"></span><span class="dot"></span>
+                        <span class="dot"></span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <h3>Project Management</h3>
+                <div class="language-row">
+                    <span class="lang-name">German</span>
+                    <span class="lang-dots">
+                        <span class="dot full"></span><span class="dot full"></span>
+                        <span class="dot"></span><span class="dot"></span>
+                        <span class="dot"></span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <h3>Linux</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Windows</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Kali Linux</h3>
+                <div class="language-row">
+                    <span class="lang-name">Arabic</span>
+                    <span class="lang-dots">
+                        <span class="dot full"></span><span class="dot"></span>
+                        <span class="dot"></span><span class="dot"></span>
+                        <span class="dot"></span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -129,59 +213,50 @@
     <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">My projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
-                    </div>
-                    <div class="project-info">
-                        <h3>Blue vs Red Simulator</h3>
-                        <p>Python game development project simulating cyber attack &amp; defense.</p>
-                        <a href="https://github.com/inessbraktaa-crypto/BluevsRedSimulator" target="_blank" class="project-link">View Project →</a>
-                    </div>
+                    <h3>Python Project</h3>
+                    <p>Python Game Development.</p>
+                    <a href="https://github.com/inessbraktaa-crypto/BluevsRedSimulator" target="_blank" class="project-link">See project →</a>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #0f3460, #16213e);">
-                    </div>
-                    <div class="project-info">
-                        <h3>Coming Soon</h3>
-                        <p>New cybersecurity project in development — stay tuned!</p>
-                        <a href="#" class="project-link">Coming Soon →</a>
-                    </div>
+                    <h3>Project</h3>
+                    <p>Creation of the project.</p>
+                    <a href="https://github.com/toncompte/projet2" target="_blank" class="project-link">See project →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="section experience">
+    <!-- ===== CYBER LABS ===== -->
+    <section id="cyber-labs" class="section cyber-labs">
         <div class="container">
-            <h2 class="section-title">Experience &amp; Events</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>CyberDay Luxembourg</h3>
-                        <span class="timeline-date">October 2025</span>
-                        <p>Participation à des ateliers, conférences et networking dans le domaine de la cybersécurité.</p>
-                    </div>
+            <h2 class="section-title">Cybersecurity Labs</h2>
+            <p class="labs-text">I practice cybersecurity on TryHackMe.</p>
+            <a href="https://tryhackme.com/p/inessbraktaa" target="_blank" class="btn btn-primary">See my TryHackMe</a>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certif-grid">
+                <div class="certif-card">
+                    <img src="microsoft-office-specialist-powerpoint-associate-microsoft-365-apps.png" alt="PowerPoint Certification" />
+                    <h3>PowerPoint Associate</h3>
+                    <a href="https://www.credly.com/badges/76fefbd6-ed07-49bb-8aa6-98d974c684b0/linked_in_profile" target="_blank">Verify credential</a>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Internet Days Luxembourg</h3>
-                        <span class="timeline-date">November 2025</span>
-                        <p>Conférences sur la sécurité et l'innovation numérique.</p>
-                    </div>
+                <div class="certif-card">
+                    <img src="microsoft-office-specialist-word-associate-microsoft-365-apps.png" alt="Word Associate Certification" />
+                    <h3>Word Associate</h3>
+                    <a href="https://www.credly.com/badges/c1ffa39c-6a9f-4aa5-8228-df2574f93a7f/linked_in_profile" target="_blank">Verify credential</a>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>TryHackMe</h3>
-                        <span class="timeline-date">Ongoing</span>
-                        <p>Pratique quotidienne de la cybersécurité sur TryHackMe.</p>
-                        <a href="https://tryhackme.com/p/inessbraktaa" target="_blank" class="timeline-link">View Profile →</a>
-                    </div>
+                <div class="certif-card">
+                    <img src="microsoft-office-specialist-word-expert-microsoft-365-apps.png" alt="Word Expert Certification" />
+                    <h3>Word Expert</h3>
+                    <a href="https://www.credly.com/badges/0d74c9c5-3e85-490d-b234-6705a2705566/linked_in_profile" target="_blank">Verify credential</a>
                 </div>
             </div>
         </div>
@@ -190,26 +265,16 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-subtitle">Have a question or want to collaborate? Reach out!</p>
-            <div class="contact-links">
-                <a href="mailto:inessbraktaa@gmail.com" class="contact-item">
-                    <span>inessbraktaa@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/in%C3%A8s-brakta" target="_blank" class="contact-item">
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/inessbraktaa-crypto" target="_blank" class="contact-item">
-                    <span>GitHub</span>
-                </a>
-            </div>
+            <h2 class="section-title">Contact me!</h2>
+            <p class="contact-line">Email: <a href="mailto:inessbraktaa@gmail.com">inessbraktaa@gmail.com</a></p>
+            <p class="contact-line">LinkedIn: <a href="https://www.linkedin.com/in/in%C3%A8s-brakta" target="_blank">Click here!</a></p>
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 — Inès Brakta</p>
+            <p>&copy; 2026 – Inès Brakta</p>
         </div>
     </footer>
 

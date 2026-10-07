@@ -806,44 +806,63 @@ ul {
     }
 }
 
-/* ===== SKILLS MARQUEE ===== */
+/* ===== SKILLS ===== */
 
 .skills {
 overflow: hidden;
 }
 
+/* Full width, even outside .container */
 .skills-marquee {
-width: 100%;
+width: 100vw;
+max-width: 100vw;
 overflow: hidden;
 display: flex;
 flex-direction: column;
-gap: 18px;
-padding: 20px 0;
+gap: 16px;
+margin-top: 25px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.skills-row {
+width: 100%;
+overflow: hidden;
 }
 
 .skills-track {
 display: flex;
 width: max-content;
-gap: 14px;
-white-space: nowrap;
+will-change: transform;
 }
 
-.skills-track .skill {
+.skills-group {
+display: flex;
+align-items: center;
+gap: 14px;
+padding-right: 14px;
 flex-shrink: 0;
 }
 
-/* Right */
+/* ===== DIRECTIONS ===== */
+
+/* Row 1 & 3 → RIGHT */
 .track-right {
-animation: scroll-right 28s linear infinite;
+animation: skills-right 30s linear infinite;
 }
 
-/* Left */
+/* Row 2 → LEFT */
 .track-left {
-animation: scroll-left 28s linear infinite;
+animation: skills-left 30s linear infinite;
 }
 
-/* Animations */
-@keyframes scroll-left {
+/*
+Because each track contains two identical groups,
+moving exactly one group width creates a seamless loop.
+*/
+
+@keyframes skills-left {
 from {
 transform: translateX(0);
 }
@@ -856,7 +875,7 @@ to {
 
 }
 
-@keyframes scroll-right {
+@keyframes skills-right {
 from {
 transform: translateX(-50%);
 }
@@ -869,20 +888,22 @@ to {
 
 }
 
-/* Pause when hovering */
+/* Pause on hover */
 .skills-marquee:hover .skills-track {
 animation-play-state: paused;
 }
 
-/* Mobile */
+/* ===== MOBILE ===== */
+
 @media (max-width: 768px) {
 .skills-marquee {
 gap: 12px;
 }
 
 ```
-.skills-track {
+.skills-group {
     gap: 10px;
+    padding-right: 10px;
 }
 
 .track-right,
@@ -893,10 +914,10 @@ gap: 12px;
 
 }
 
-/* Accessibility */
+/* ===== REDUCED MOTION ===== */
+
 @media (prefers-reduced-motion: reduce) {
 .skills-track {
 animation: none;
 }
 }
-

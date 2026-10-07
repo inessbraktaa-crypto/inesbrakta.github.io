@@ -86,9 +86,9 @@ animateParticles();
 const typewriterElement = document.getElementById('typewriter');
 const phrases = [
     'BTS Cybersecurity Student',
-    'Network & System Security Enthusiast',
-    'Python & PowerShell Developer',
-    'Ethical Hacker in Training'
+    'Network & System Security enthusiast',
+    'Python Developer',
+    'Ethical Hacker in training'
 ];
 
 let phraseIndex = 0;
@@ -175,6 +175,8 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+
+
 // ============================================
 // 5. COMPTEURS ANIMÉS
 // ============================================
@@ -209,3 +211,22 @@ const observer = new IntersectionObserver((entries) => {
 statNumbers.forEach(el => observer.observe(el));
 
 console.log('🚀 Portfolio Inès Brakta – version sombre & complète !');
+
+document.querySelectorAll(".faq-question").forEach((question) => {
+question.addEventListener("click", () => {
+const item = question.closest(".faq-item");
+
+```
+    // Close other questions
+    document.querySelectorAll(".faq-item").forEach((otherItem) => {
+        if (otherItem !== item) {
+            otherItem.classList.remove("active");
+        }
+    });
+
+    // Toggle current question
+    item.classList.toggle("active");
+});
+```
+
+});

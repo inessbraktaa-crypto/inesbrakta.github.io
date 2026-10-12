@@ -1,34 +1,42 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inès Brakta – Cybersecurity Portfolio</title>
 
     <meta
         name="description"
         content="Inès Brakta – Cybersecurity student interested in penetration testing, Red Team, digital forensics and defensive security."
-    />
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
-    />
+    >
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===== CANVAS BACKGROUND ===== -->
+    <!-- ==================== BACKGROUND ==================== -->
+
     <canvas id="bgCanvas"></canvas>
 
-    <!-- ===== NAVIGATION ===== -->
+
+    <!-- ==================== NAVIGATION ==================== -->
+
     <nav class="navbar" id="navbar">
+
         <div class="nav-container">
 
             <a href="#hero" class="logo">IB</a>
@@ -55,7 +63,7 @@
                     class="social-icon"
                     aria-label="GitHub"
                 >
-                    <img src="githubicon.png" alt="GitHub" />
+                    <img src="githubicon.png" alt="GitHub">
                 </a>
 
                 <a
@@ -65,7 +73,7 @@
                     class="social-icon"
                     aria-label="LinkedIn"
                 >
-                    <img src="linkedinicon.png" alt="LinkedIn" />
+                    <img src="linkedinicon.png" alt="LinkedIn">
                 </a>
 
                 <button
@@ -80,11 +88,14 @@
                 </button>
 
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- ===== HERO ===== -->
+    <!-- ==================== HERO ==================== -->
+
     <section class="hero" id="hero">
 
         <div class="hero-content">
@@ -102,6 +113,7 @@
             </p>
 
             <div class="hero-buttons">
+
                 <a
                     href="cv-ines-brakta.pdf"
                     target="_blank"
@@ -110,6 +122,7 @@
                 >
                     Download CV
                 </a>
+
             </div>
 
         </div>
@@ -122,7 +135,8 @@
     </section>
 
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ==================== ABOUT ==================== -->
+
     <section id="about" class="section about">
 
         <div class="container">
@@ -139,26 +153,27 @@
                         interested in penetration testing, digital forensics
                         and Red Team operations.
                     </p>
-                    <br>
+
                     <p>
                         I enjoy learning, gaining hands-on experience and
                         developing cybersecurity projects. I am especially
                         interested in understanding how systems can be tested,
                         investigated and secured.
                     </p>
-                    <br>
+
                     <p>
                         My main interests are in offensive security, ethical
                         hacking and digital forensics, while also maintaining
                         an interest in Blue Team and defensive security to
                         better understand both attack and defense techniques.
                     </p>
-                    <br>
+
                     <p>
-                        As part of the final year of my BTS, I will complete an 
-                        internship at the end of the second year, which will allow 
-                        me to gain professional experience and apply my cybersecurity
-                        knowledge in a real-world environment.
+                        As part of the final year of my BTS, I will complete
+                        an internship at the end of the second year, which
+                        will allow me to gain professional experience and
+                        apply my cybersecurity knowledge in a real-world
+                        environment.
                     </p>
 
                     <div class="about-social">
@@ -184,7 +199,6 @@
                     </div>
 
                 </div>
-
 
                 <div class="about-stats">
 
@@ -212,7 +226,8 @@
     </section>
 
 
-    <!-- ===== EDUCATION ===== -->
+    <!-- ==================== EDUCATION ==================== -->
+
     <section id="education" class="section education">
 
         <div class="container">
@@ -229,20 +244,17 @@
 
                         <h3>BTS Cybersecurity – Lycée Guillaume Kroll</h3>
 
-                        <span class="timeline-date">
-                            2024 – 2026
-                        </span>
+                        <span class="timeline-date">2024 – 2026</span>
 
                         <p>
-                            Focused on network and system security, cybersecurity,
-                            Linux environments, networking, Python and PowerShell
-                            fundamentals.
+                            Focused on network and system security,
+                            cybersecurity, Linux environments, networking,
+                            Python and PowerShell fundamentals.
                         </p>
 
                     </div>
 
                 </div>
-
 
                 <div class="timeline-item">
 
@@ -252,9 +264,7 @@
 
                         <h3>High School Diploma – Lycée Frédéric Chopin</h3>
 
-                        <span class="timeline-date">
-                            2022 – 2024
-                        </span>
+                        <span class="timeline-date">2022 – 2024</span>
 
                         <p>
                             Mathematics and English literature focus.
@@ -271,7 +281,8 @@
     </section>
 
 
-    <!-- ===== SKILLS ===== -->
+    <!-- ==================== SKILLS ==================== -->
+
     <section id="skills" class="section skills">
 
         <div class="container">
@@ -280,80 +291,115 @@
 
                 <span class="skills-number">01</span>
 
-                <h2 class="section-title">
-                    Skills
-                </h2>
+                <h2 class="section-title">Skills</h2>
 
             </div>
 
+            <div class="skills-grid">
 
-            
-<div class="skills-grid">
+                <!-- Skill 01 -->
+                <div class="skill-card">
 
-    <div class="skill-card">
-        <div class="skill-card-header">
-            <span class="skill-icon">⌘</span>
-            <span class="skill-index">01</span>
-        </div>
-        <h3>Offensive Security</h3>
-        <p>Exploring vulnerabilities and understanding attack techniques.</p>
-        <div class="skill-tags">
-            <span>Penetration Testing</span>
-            <span>Red Team</span>
-            <span>Burp Suite</span>
-            <span>Nmap</span>
-            <span>Kali Linux</span>
-        </div>
-    </div>
+                    <div class="skill-card-header">
+                        <span class="skill-icon">⌘</span>
+                        <span class="skill-index">01</span>
+                    </div>
 
-    <div class="skill-card">
-        <div class="skill-card-header">
-            <span class="skill-icon">⌕</span>
-            <span class="skill-index">02</span>
-        </div>
-        <h3>Digital Forensics</h3>
-        <p>Investigating systems and analysing digital evidence.</p>
-        <div class="skill-tags">
-            <span>Digital Forensics</span>
-            <span>Investigation</span>
-            <span>System Analysis</span>
-        </div>
-    </div>
+                    <h3>Offensive Security</h3>
 
-    <div class="skill-card">
-        <div class="skill-card-header">
-            <span class="skill-icon">⌘</span>
-            <span class="skill-index">03</span>
-        </div>
-        <h3>Network & System Security</h3>
-        <p>Understanding network traffic, infrastructure and system security.</p>
-        <div class="skill-tags">
-            <span>Wireshark</span>
-            <span>Networking</span>
-            <span>Active Directory</span>
-            <span>Linux</span>
-        </div>
-    </div>
+                    <p>
+                        Exploring vulnerabilities and understanding
+                        attack techniques.
+                    </p>
 
-    <div class="skill-card">
-        <div class="skill-card-header">
-            <span class="skill-icon">$_</span>
-            <span class="skill-index">04</span>
-        </div>
-        <h3>Scripting & Defense</h3>
-        <p>Learning automation and defensive approaches to security.</p>
-        <div class="skill-tags">
-            <span>Python</span>
-            <span>PowerShell</span>
-            <span>Blue Team</span>
-        </div>
-    </div>
+                    <div class="skill-tags">
+                        <span>Penetration Testing</span>
+                        <span>Red Team</span>
+                        <span>Burp Suite</span>
+                        <span>Nmap</span>
+                        <span>Kali Linux</span>
+                    </div>
 
-</div>
+                </div>
+
+                <!-- Skill 02 -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <span class="skill-icon">⌕</span>
+                        <span class="skill-index">02</span>
+                    </div>
+
+                    <h3>Digital Forensics</h3>
+
+                    <p>
+                        Investigating systems and analysing digital evidence.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Digital Forensics</span>
+                        <span>Investigation</span>
+                        <span>System Analysis</span>
+                    </div>
+
+                </div>
+
+                <!-- Skill 03 -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <span class="skill-icon">⌘</span>
+                        <span class="skill-index">03</span>
+                    </div>
+
+                    <h3>Network &amp; System Security</h3>
+
+                    <p>
+                        Understanding network traffic, infrastructure
+                        and system security.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Wireshark</span>
+                        <span>Networking</span>
+                        <span>Active Directory</span>
+                        <span>Linux</span>
+                    </div>
+
+                </div>
+
+                <!-- Skill 04 -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <span class="skill-icon">$_</span>
+                        <span class="skill-index">04</span>
+                    </div>
+
+                    <h3>Scripting &amp; Defense</h3>
+
+                    <p>
+                        Learning automation and defensive approaches
+                        to security.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>PowerShell</span>
+                        <span>Blue Team</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- ===== EXPERIENCES ===== -->
+    <!-- ==================== EXPERIENCES ==================== -->
+
     <section id="experiences" class="section experiences">
 
         <div class="container">
@@ -368,27 +414,22 @@
 
                     <h3>CyberDay.lu</h3>
 
-                    <p>
-                        <strong>Date:</strong> October 9, 2025
-                    </p>
+                    <p><strong>Date:</strong> October 9, 2025</p>
 
                     <p>
-                        Participation in a cybersecurity event organized by
-                        RESTENA, with conferences, workshops and discussions
-                        around cybersecurity, cyber resilience and current
-                        security challenges.
+                        Participation in a cybersecurity event organized
+                        by RESTENA, with conferences, workshops and
+                        discussions around cybersecurity, cyber resilience
+                        and current security challenges.
                     </p>
 
                 </div>
-
 
                 <div class="exp-card">
 
                     <h3>Luxembourg Internet Days</h3>
 
-                    <p>
-                        <strong>Date:</strong> November 18–19, 2025
-                    </p>
+                    <p><strong>Date:</strong> November 18–19, 2025</p>
 
                     <p>
                         Participation in conferences and networking sessions
@@ -398,14 +439,11 @@
 
                 </div>
 
-
                 <div class="exp-card">
 
                     <h3>AWS re:Invent – re:Cap</h3>
 
-                    <p>
-                        <strong>Date:</strong> March 4, 2026
-                    </p>
+                    <p><strong>Date:</strong> March 4, 2026</p>
 
                     <p>
                         Participation in a technical event covering cloud
@@ -416,16 +454,13 @@
 
                 </div>
 
-
                 <div class="exp-card">
 
                     <h3>
                         Student Visit – Luxembourg Armed Forces &amp; Datacenter
                     </h3>
 
-                    <p>
-                        <strong>Date:</strong> March 13, 2026
-                    </p>
+                    <p><strong>Date:</strong> March 13, 2026</p>
 
                     <p>
                         Educational visit providing insight into professional
@@ -435,14 +470,11 @@
 
                 </div>
 
-
                 <div class="exp-card">
 
                     <h3>Tech Supreme Court Junior</h3>
 
-                    <p>
-                        <strong>Date:</strong> March 24, 2026
-                    </p>
+                    <p><strong>Date:</strong> March 24, 2026</p>
 
                     <p>
                         Participation in a fictional and interactive trial
@@ -453,20 +485,17 @@
 
                 </div>
 
-
                 <div class="exp-card">
 
                     <h3>BSidesLuxembourg</h3>
 
-                    <p>
-                        <strong>Date:</strong> May 6, 2026
-                    </p>
+                    <p><strong>Date:</strong> May 6, 2026</p>
 
                     <p>
                         Participation in a cybersecurity community event
                         featuring technical talks, security topics, workshops
-                        and networking with cybersecurity professionals and
-                        students.
+                        and networking with cybersecurity professionals
+                        and students.
                     </p>
 
                 </div>
@@ -478,7 +507,8 @@
     </section>
 
 
-    <!-- ===== LANGUAGES ===== -->
+    <!-- ==================== LANGUAGES ==================== -->
+
     <section id="languages" class="section languages">
 
         <div class="container">
@@ -488,9 +518,7 @@
             <div class="languages-list">
 
                 <div class="language-row">
-
                     <span class="lang-name">French</span>
-
                     <span class="lang-dots">
                         <span class="dot full"></span>
                         <span class="dot full"></span>
@@ -498,14 +526,10 @@
                         <span class="dot full"></span>
                         <span class="dot full"></span>
                     </span>
-
                 </div>
 
-
                 <div class="language-row">
-
                     <span class="lang-name">English</span>
-
                     <span class="lang-dots">
                         <span class="dot full"></span>
                         <span class="dot full"></span>
@@ -513,14 +537,10 @@
                         <span class="dot full"></span>
                         <span class="dot"></span>
                     </span>
-
                 </div>
 
-
                 <div class="language-row">
-
                     <span class="lang-name">Italian</span>
-
                     <span class="lang-dots">
                         <span class="dot full"></span>
                         <span class="dot full"></span>
@@ -528,14 +548,10 @@
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </span>
-
                 </div>
 
-
                 <div class="language-row">
-
                     <span class="lang-name">German</span>
-
                     <span class="lang-dots">
                         <span class="dot full"></span>
                         <span class="dot full"></span>
@@ -543,14 +559,10 @@
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </span>
-
                 </div>
 
-
                 <div class="language-row">
-
                     <span class="lang-name">Arabic</span>
-
                     <span class="lang-dots">
                         <span class="dot full"></span>
                         <span class="dot"></span>
@@ -558,7 +570,6 @@
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </span>
-
                 </div>
 
             </div>
@@ -568,25 +579,38 @@
     </section>
 
 
-    <!-- ===== PROJECTS ===== -->
+    <!-- ==================== PROJECTS ==================== -->
+
     <section id="projects" class="section projects">
 
         <div class="container">
 
-            <h2 class="section-title">
-                My Projects
-            </h2>
+            <h2 class="section-title">My Projects</h2>
 
             <div class="projects-grid">
 
+                <!-- PROJECT 01: BLUE VS RED SIMULATOR -->
                 <div class="project-card">
+
+                    <div class="project-top">
+                        <span class="project-number">PROJECT 01</span>
+                        <span class="project-symbol">↗</span>
+                    </div>
 
                     <h3>Blue vs Red Simulator</h3>
 
-                    <p>
-                        A Python-based project exploring offensive and defensive
-                        cybersecurity concepts through a simulated environment.
+                    <p class="project-description">
+                        A Python-based project exploring offensive and
+                        defensive cybersecurity concepts through a simulated
+                        environment. The goal is to better understand attack
+                        scenarios and defensive responses.
                     </p>
+
+                    <div class="project-tools">
+                        <span>Python</span>
+                        <span>Cybersecurity</span>
+                        <span>Simulation</span>
+                    </div>
 
                     <a
                         href="https://github.com/inessbraktaa-crypto/BluevsRedSimulator"
@@ -594,20 +618,43 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        See project →
+                        View on GitHub <span>↗</span>
                     </a>
 
                 </div>
 
 
+                <!-- PROJECT TEMPLATE: DUPLICATE THIS CARD -->
                 <div class="project-card">
 
-                    <h3>Cybersecurity Project</h3>
+                    <div class="project-top">
+                        <span class="project-number">PROJECT 02</span>
+                        <span class="project-symbol">↗</span>
+                    </div>
 
-                    <p>
-                        More projects and cybersecurity work will be added as
-                        they are completed.
+                    <h3>Project Name</h3>
+
+                    <p class="project-description">
+                        Describe your project in two or three sentences.
+                        Explain its objective, the problem it addresses
+                        and what you developed or investigated.
                     </p>
+
+                    <div class="project-tools">
+                        <span>Tool 1</span>
+                        <span>Tool 2</span>
+                        <span>Technology</span>
+                    </div>
+
+                    <!-- Replace the URL with your repository -->
+                    <a
+                        href="https://github.com/inessbraktaa-crypto"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View on GitHub <span>↗</span>
+                    </a>
 
                 </div>
 
@@ -618,18 +665,17 @@
     </section>
 
 
-    <!-- ===== CYBER LABS ===== -->
+    <!-- ==================== CYBER LABS ==================== -->
+
     <section id="cyber-labs" class="section cyber-labs">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Cybersecurity Labs
-            </h2>
+            <h2 class="section-title">Cybersecurity Labs</h2>
 
             <p class="labs-text">
-                I practice cybersecurity through hands-on labs and practical
-                exercises on TryHackMe.
+                I practice cybersecurity through hands-on labs and
+                practical exercises on TryHackMe.
             </p>
 
             <a
@@ -646,27 +692,25 @@
     </section>
 
 
-    <!-- ===== CERTIFICATIONS ===== -->
+    <!-- ==================== CERTIFICATIONS ==================== -->
+
     <section id="certifications" class="section certifications">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Certifications
-            </h2>
+            <h2 class="section-title">Certifications</h2>
 
             <div class="certif-grid">
 
+                <!-- MICROSOFT POWERPOINT -->
                 <div class="certif-card">
 
                     <img
                         src="microsoft-office-specialist-powerpoint-associate-microsoft-365-apps.png"
                         alt="Microsoft PowerPoint Associate Certification"
-                    />
+                    >
 
-                    <h3>
-                        PowerPoint Associate
-                    </h3>
+                    <h3>PowerPoint Associate</h3>
 
                     <a
                         href="https://www.credly.com/badges/76fefbd6-ed07-49bb-8aa6-98d974c684b0/linked_in_profile"
@@ -679,16 +723,15 @@
                 </div>
 
 
+                <!-- MICROSOFT WORD ASSOCIATE -->
                 <div class="certif-card">
 
                     <img
                         src="microsoft-office-specialist-word-associate-microsoft-365-apps.png"
                         alt="Microsoft Word Associate Certification"
-                    />
+                    >
 
-                    <h3>
-                        Word Associate
-                    </h3>
+                    <h3>Word Associate</h3>
 
                     <a
                         href="https://www.credly.com/badges/c1ffa39c-6a9f-4aa5-8228-df2574f93a7f/linked_in_profile"
@@ -701,16 +744,15 @@
                 </div>
 
 
+                <!-- MICROSOFT WORD EXPERT -->
                 <div class="certif-card">
 
                     <img
                         src="microsoft-office-specialist-word-expert-microsoft-365-apps.png"
                         alt="Microsoft Word Expert Certification"
-                    />
+                    >
 
-                    <h3>
-                        Word Expert
-                    </h3>
+                    <h3>Word Expert</h3>
 
                     <a
                         href="https://www.credly.com/badges/0d74c9c5-3e85-490d-b234-6705a2705566/linked_in_profile"
@@ -723,26 +765,25 @@
                 </div>
 
 
-                
+                <!-- CERTIFICAT VOLTAIRE -->
                 <div class="certif-card">
 
-            <img
-                    src="certificat-voltaire.png"
-                    alt="Certificat Voltaire"
-            />
+                    <img
+                        src="certificat-voltaire.png"
+                        alt="Certificat Voltaire"
+                    >
 
-                <h3>Certificat Voltaire</h3>
+                    <h3>Certificat Voltaire</h3>
 
-            <a
-                href="https://mon.certificat-voltaire.fr/verification-certificat?code=KXH7KHC"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Verify credential →
-            </a>
+                    <a
+                        href="https://mon.certificat-voltaire.fr/verification-certificat?code=KXH7KHC"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Verify credential →
+                    </a>
 
                 </div>
-
 
             </div>
 
@@ -751,20 +792,17 @@
     </section>
 
 
-    <!-- ===== FAQ ===== -->
+    <!-- ==================== FAQ ==================== -->
+
     <section id="faq" class="section faq">
 
         <div class="container">
 
             <div class="faq-header">
 
-                <p class="faq-label">
-                    FAQ
-                </p>
+                <p class="faq-label">FAQ</p>
 
-                <h2 class="section-title">
-                    Questions?
-                </h2>
+                <h2 class="section-title">Questions?</h2>
 
                 <p class="faq-intro">
                     A few things you might want to know about me, my interests
@@ -773,9 +811,9 @@
 
             </div>
 
-
             <div class="faq-list">
 
+                <!-- FAQ 01 -->
                 <div class="faq-item">
 
                     <button
@@ -783,17 +821,11 @@
                         type="button"
                         aria-expanded="false"
                     >
-                        <span>
-                            What areas of cybersecurity interest you?
-                        </span>
-
-                        <span class="faq-icon">
-                            +
-                        </span>
+                        <span>What areas of cybersecurity interest you?</span>
+                        <span class="faq-icon">+</span>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
                             I am particularly interested in penetration testing,
                             Red Team operations and digital forensics. I also
@@ -801,12 +833,12 @@
                             to better understand how attacks can be detected
                             and prevented.
                         </p>
-
                     </div>
 
                 </div>
 
 
+                <!-- FAQ 02 -->
                 <div class="faq-item">
 
                     <button
@@ -814,17 +846,11 @@
                         type="button"
                         aria-expanded="false"
                     >
-                        <span>
-                            Why did you choose cybersecurity?
-                        </span>
-
-                        <span class="faq-icon">
-                            +
-                        </span>
+                        <span>Why did you choose cybersecurity?</span>
+                        <span class="faq-icon">+</span>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
                             I enjoy understanding how systems work, finding
                             weaknesses and thinking about how they can be
@@ -832,12 +858,12 @@
                             technical challenges, investigation and continuous
                             learning, which is what attracts me to the field.
                         </p>
-
                     </div>
 
                 </div>
 
 
+                <!-- FAQ 03 -->
                 <div class="faq-item">
 
                     <button
@@ -845,29 +871,23 @@
                         type="button"
                         aria-expanded="false"
                     >
-                        <span>
-                            What are you currently learning?
-                        </span>
-
-                        <span class="faq-icon">
-                            +
-                        </span>
+                        <span>What are you currently learning?</span>
+                        <span class="faq-icon">+</span>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
                             I am currently developing my knowledge of penetration
                             testing, network security, Linux environments,
                             digital forensics and offensive security techniques
                             through projects, labs and practical exercises.
                         </p>
-
                     </div>
 
                 </div>
 
 
+                <!-- FAQ 04 -->
                 <div class="faq-item">
 
                     <button
@@ -875,29 +895,23 @@
                         type="button"
                         aria-expanded="false"
                     >
-                        <span>
-                            Are you looking for an internship or opportunity?
-                        </span>
-
-                        <span class="faq-icon">
-                            +
-                        </span>
+                        <span>Are you looking for an internship or opportunity?</span>
+                        <span class="faq-icon">+</span>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
                             Yes. I am interested in opportunities that allow me
                             to gain practical experience in cybersecurity,
                             particularly in penetration testing, Red Team,
                             digital forensics or security operations.
                         </p>
-
                     </div>
 
                 </div>
 
 
+                <!-- FAQ 05 -->
                 <div class="faq-item">
 
                     <button
@@ -905,17 +919,11 @@
                         type="button"
                         aria-expanded="false"
                     >
-                        <span>
-                            What do you enjoy most about cybersecurity?
-                        </span>
-
-                        <span class="faq-icon">
-                            +
-                        </span>
+                        <span>What do you enjoy most about cybersecurity?</span>
+                        <span class="faq-icon">+</span>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
                             I enjoy the investigative side of cybersecurity:
                             understanding what happened, finding vulnerabilities,
@@ -923,7 +931,6 @@
                             problem. I particularly like challenges where I have
                             to think outside the box.
                         </p>
-
                     </div>
 
                 </div>
@@ -935,14 +942,13 @@
     </section>
 
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ==================== CONTACT ==================== -->
+
     <section id="contact" class="section contact">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Contact me!
-            </h2>
+            <h2 class="section-title">Contact me!</h2>
 
             <p class="contact-line">
                 Email:
@@ -967,21 +973,24 @@
     </section>
 
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ==================== FOOTER ==================== -->
+
     <footer class="footer">
 
         <div class="container">
 
-            <p>
-                &copy; 2026 – Inès Brakta
-            </p>
+            <p>&copy; 2026 – Inès Brakta</p>
 
         </div>
 
     </footer>
 
 
+    <!-- ==================== JAVASCRIPT ==================== -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
+```
